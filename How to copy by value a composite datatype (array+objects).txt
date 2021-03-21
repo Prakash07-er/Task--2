@@ -1,0 +1,35 @@
+How to copy by value a composite type.
+
+There are 4 types to copy by value a compostite type.
+
+	1. Spread operator (...)
+	2. Using the Object.assign() method
+	3. Using the JSON.stringify() and JSON.parse() methods
+
+Spread Operator:
+
+ a = [1,2,3,4]
+ b= [...a]
+ b[3]= 555
+ console.log(a)     // [1,2,3,4]
+ console.log(b)     // [1,2,3,555]
+
+   In above example, while copying the variable value is changed but the original paramter will remain the same (a value is not changed  )
+
+2. Using the Object.assign() method
+
+  a = [1,2,3,4]
+ b=  object.assign([], a)
+ b[3]= 555
+ console.log(a)     // [1,2,3,4]
+ console.log(b)     // [1,2,3,555]
+
+  Note the empty [] as the first argument, this will ensure you don't mutate the original object
+
+3. Using the JSON.stringify() and JSON.parse() methods
+  a = [1,2,3,4]
+   b= JSON.parse(JSON.stringify(a))
+ b[3]= 555
+ console.log(a)     // [1,2,3,4]
+ console.log(b)     // [1,2,3,555]
+ 
