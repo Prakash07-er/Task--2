@@ -1,0 +1,40 @@
+Copy by Value:
+
+1. In Javascript "primitive types" are copied by value. 
+   Primitive data types are Boolean, null, undefined, String, and Number.
+  
+  For Ex: If you are having 2 single values like 10 and 20. It can be copied easily by values.
+
+        a= 10
+	b= a
+ 	
+	**It copies by memory
+
+2. Copies the actual parameter (a=10 )and passed into formal parameter (b =a).
+3. Changes in formal pareter will not affect the formal parameter (it will not affect the value of a)
+4. It separate the memory location and allocate to actual and formal parameters.
+
+
+Copy by Referance:
+
+1. In Javascript "Composite types" are copied by reference.
+   Composite data types are Array, Function, and Object
+
+2. Composite type may contain nested type so it will contain multiple values.
+
+   For EX: IN composite type {
+                                key: value 1
+				key1:{ K1=V1  // it may contain multiple values
+					k2 = V2
+				      }
+				key2: value 3
+			     }
+
+3. It only copies the referance of actual parameter and passed into formal parameter 
+4. Changes in formal pareter will affect the formal parameter.
+   ex:  var arr = [1,2,3,4]
+        var arr2 = arr
+	arr2[3]= 40
+	console.log(arr2)
+	 result will be = [1,2,3,40]
+5. Same memery location is allocated for both actual and formal parameters
